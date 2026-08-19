@@ -1,6 +1,14 @@
 :root {
   --content-width: 1200px;
   --space-lg: 32px;
+  --color-main-orange: #FF7A00;
+  --color-sub-orange: #FFB000;
+  --color-main-blue: #2EC4B6;
+  --color-pokemon: #F6D500;
+  --color-gangbeasts: #FF6B5B;
+  --color-asobitaizen: #1B4965;
+  --color-asobitaizen: #FF4800;
+  --color-fallguys: #01E9D3;
 }
 
 * {
