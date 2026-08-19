@@ -4,6 +4,7 @@
   --color-main-orange: #FF7A00;
   --color-sub-orange: #FFB000;
   --color-main-blue: #2EC4B6;
+  --color-sub-blue: #1B4965;
   --color-pokemon: #F6D500;
   --color-gangbeasts: #FF6B5B;
   --color-asobitaizen: #1B4965;
@@ -35,3 +36,26 @@ a {
   margin: 0 auto;
   padding: 0 var(--space-lg);
 }
+
+ .time-table {
+    width: 600px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  }
+  .time-table th, .time-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  .time-table th {
+    width: 120px;
+    color: #555;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .time-table tr:last-child th,
+  .time-table tr:last-child td {
+    border-bottom: none;
+  }
