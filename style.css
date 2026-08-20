@@ -4,12 +4,14 @@
   --color-main-orange: #FF7A00;
   --color-sub-orange: #FFB000;
   --color-main-blue: #2EC4B6;
+  --color-white: white;
   --color-sub-blue: #1B4965;
   --color-pokemon: #F6D500;
   --color-gangbeasts: #FF6B5B;
   --color-asobitaizen: #1B4965;
   --color-asobitaizen: #FF4800;
   --color-fallguys: #01E9D3;
+  --color-time: #7F7F7F;
 }
 
 * {
@@ -31,31 +33,44 @@ a {
   text-decoration: none;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 80px; 
+}
+
 .container {
   max-width: var(--content-width);
   margin: 0 auto;
   padding: 0 var(--space-lg);
+  background-color: var(--color-white);
+  border-radius: 214px;
+  border: 5px solid var(--color-main-blue);
+  text-align: center;
+  padding: 60px 0;
 }
 
- .time-table {
-    width: 600px;
-    margin: 0 auto;
-    border-collapse: collapse;
-    background: #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  }
-  .time-table th, .time-table td {
-    padding: 14px 20px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-  }
-  .time-table th {
-    width: 120px;
-    color: #555;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .time-table tr:last-child th,
-  .time-table tr:last-child td {
-    border-bottom: none;
-  }
+h2 {
+  color: var(--color-main-orange);
+  border-bottom: 5px solid var(--color-main-blue);
+  width: fit-content;
+  margin: 0 auto 40px;
+  padding-bottom: 7px;
+}
+
+
+table {
+  margin: 0 auto;
+}
+
+.time-table th {
+  text-align: left; 
+  padding-right: 80px;
+  color: var(--color-time);
+}
+
+.time-table td {
+  text-align: left;
+  color: var(--color-sub-blue);
+}
+
