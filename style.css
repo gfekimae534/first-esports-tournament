@@ -22,6 +22,10 @@
 
 body {
   min-width: 1024px; /* ページ全体の下限 */
+  font-family: "Inter",'Noto Sans JP',sans-serif;
+  color: var(--color-sub-blue);
+  font-weight: bold;
+  background-color: var(--color-sub-orange);
 }
 
 img {
@@ -33,21 +37,124 @@ a {
   text-decoration: none;
 }
 
+header ul{
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  list-style: none;
+  font-size: 36px;
+  font-weight: normal;
+  justify-content: center;
+  font-family: 'Noto Sans JP',sans-serif;
+  color: var(--color-white);
+  align-items: center;
+  height: 100px;
+  background-color: var(--color-main-blue);
+  position: fixed;
+  width: 100%;
+}
+
+.hero {
+  width: 100%;
+  text-align: center;
+  background-image: url("images/mv.png");
+  background-size: cover;      /* 画像を要素いっぱいに拡大縮小 */
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.hero-inner {
+  position: relative;
+  height: 100%;             /* .mvの高さを引き継ぐ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  -webkit-text-stroke: 8px #fff;       /* 5pxの白縁(モダンブラウザ) */
+  paint-order: stroke fill;            /* 縁を文字の後ろに回す(縁が文字を潰さないように) */
+  filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
+/* 右に0px、下に4pxずらし、2pxぼかした、透明度50%の黒い影 */
+}
+
+.sub-title {
+  font-size: 48px;
+  position: absolute;
+  top: 500px;
+  left: 500px;
+}
+
+
+
+.title-blue{
+  font-size: 64px;
+  letter-spacing: 0.15em;
+}
+
+.title-orange{
+  font-size: 96px;
+  letter-spacing: 0.15em;
+}
+
+
 main {
   display: flex;
   flex-direction: column;
-  gap: 80px; 
+  gap: 80px;
 }
 
 .container {
-  max-width: var(--content-width);
   margin: 0 auto;
   padding: 0 var(--space-lg);
   background-color: var(--color-white);
-  border-radius: 214px;
   border: 5px solid var(--color-main-blue);
   text-align: center;
   padding: 60px 0;
+}
+
+.main-orange{
+  color: var(--color-main-orange);
+}
+
+.sub-orange{
+  color: var(--color-sub-orange);
+}
+
+.main-blue{
+  color: var(--color-main-blue);
+}
+
+.container-circle {
+  max-width: var(--content-width);
+  border-radius: 214px;
+}
+
+.container-about {
+  border-radius: 24px;
+  width: 100%;
+}
+
+.container-rule {
+  border-radius: 44px;
+}
+
+.about {
+  font-size: 40px;
+  line-height: 75px;
+}
+
+.days {
+  font-size: 48px;
+}
+
+.slogan {
+  font-size: 75px;
+}
+
+.rule {
+  font-size: 36px;
+  line-height: 75px;
 }
 
 h2 {
@@ -56,17 +163,21 @@ h2 {
   width: fit-content;
   margin: 0 auto 40px;
   padding-bottom: 7px;
+  font-size: 52px;
 }
 
 
 table {
   margin: 0 auto;
+  line-height: 60px;
+  font-size: 32px;
 }
 
 .time-table th {
   text-align: left; 
   padding-right: 80px;
   color: var(--color-time);
+  font-family: 'Noto Sans JP';
 }
 
 .time-table td {
