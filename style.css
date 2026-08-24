@@ -69,6 +69,7 @@ header ul{
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-top: 180px;
 }
 
 h1 {
@@ -78,11 +79,19 @@ h1 {
 /* 右に0px、下に4pxずらし、2pxぼかした、透明度50%の黒い影 */
 }
 
-.sub-title {
+.sub-title.main-orange {
   font-size: 48px;
   position: absolute;
-  top: 500px;
-  left: 500px;
+  top: 25%;
+  left: 20%;
+  transform: rotate(-10deg);
+}
+
+.sub-title.sub-orange {
+  font-size: 48px;
+  position: absolute;
+  top: 30%;
+  left: 37%;
 }
 
 
@@ -104,13 +113,16 @@ main {
   gap: 80px;
 }
 
+.about {
+  margin-top: -80px;
+}
+
 .container {
   margin: 0 auto;
-  padding: 0 var(--space-lg);
+  padding:  100px var(--space-lg);
   background-color: var(--color-white);
   border: 5px solid var(--color-main-blue);
   text-align: center;
-  padding: 60px 0;
 }
 
 .main-orange{
@@ -148,8 +160,13 @@ main {
   font-size: 48px;
 }
 
+.slogan-text {
+  margin-top: 40px;
+}
+
 .slogan {
   font-size: 75px;
+  padding: 25px 0;
 }
 
 .rule {
