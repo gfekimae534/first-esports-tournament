@@ -9,7 +9,7 @@
   --color-pokemon: #F6D500;
   --color-gangbeasts: #FF6B5B;
   --color-asobitaizen: #1B4965;
-  --color-asobitaizen: #FF4800;
+  --color-mariokart: #FF4800;
   --color-fallguys: #01E9D3;
   --color-time: #7F7F7F;
 }
@@ -25,7 +25,9 @@ body {
   font-family: "Inter",'Noto Sans JP',sans-serif;
   color: var(--color-sub-blue);
   font-weight: bold;
-  background-color: var(--color-sub-orange);
+  background-color: #ffe66d;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffcb36' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 180px 180px;
 }
 
 img {
@@ -52,6 +54,7 @@ header ul{
   background-color: var(--color-main-blue);
   position: fixed;
   width: 100%;
+  z-index: 10;
 }
 
 .hero {
@@ -72,11 +75,40 @@ header ul{
   padding-top: 180px;
 }
 
+.controller-blue {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  z-index: 1;
+}
+
+.controller-orange {
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  z-index: 1;
+}
+
+.controller-blue-shadow {
+  position: absolute;
+  top: 46%;
+  left: 22%;
+  z-index: 0;
+}
+
+.controller-orange-shadow {
+  position: absolute;
+  top: 41%;
+  left: 48%;
+  z-index: 0;
+}
+
 h1 {
   -webkit-text-stroke: 8px #fff;       /* 5pxの白縁(モダンブラウザ) */
   paint-order: stroke fill;            /* 縁を文字の後ろに回す(縁が文字を潰さないように) */
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
 /* 右に0px、下に4pxずらし、2pxぼかした、透明度50%の黒い影 */
+  z-index: 1;
 }
 
 .sub-title.main-orange {
@@ -183,7 +215,81 @@ h2 {
   font-size: 52px;
 }
 
+/* 競技種目 */
+.game-table {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px 5px; /* 上下の間隔 左右の間隔 */
+}
 
+.game {
+  text-align: center;
+}
+
+.game:nth-child(1) { grid-column: 1 / 3; }
+.game:nth-child(2) { grid-column: 3 / 5; }
+.game:nth-child(3) { grid-column: 5 / 7; }
+.game:nth-child(4) { grid-column: 2 / 4; }
+.game:nth-child(5) { grid-column: 4 / 6; }
+
+.game-image {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.game p {
+  margin-top: 12px;
+  font-weight: Semi Bold;
+  font-size: 32px;
+  text-align: left;
+}
+
+.game .asobitaizen {
+  color: var(--color-asobitaizen);
+}
+
+.game .gangbeasts {
+  color: var(--color-gangbeasts);
+}
+
+.game .pokemon {
+  color: var(--color-pokemon);
+}
+
+.game .fallguys {
+  color: var(--color-fallguys);
+}
+
+.game .mariokart {
+  color: var(--color-mariokart);
+}
+
+
+
+.image-asobitaizen {
+  border: 5px solid var(--color-asobitaizen);
+}
+
+.image-gangbeasts {
+  border: 5px solid var(--color-gangbeasts);
+}
+
+.image-pokemon {
+  border: 5px solid var(--color-pokemon);
+}
+
+.image-mariokart {
+  border: 5px solid var(--color-mariokart);
+}
+
+.image-fallguys {
+  border: 5px solid var(--color-fallguys);
+}
+
+
+
+/*タイムテーブル*/
 table {
   margin: 0 auto;
   line-height: 60px;
