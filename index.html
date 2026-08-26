@@ -70,7 +70,7 @@
               <p class="mariokart">MARIOKART8<br>DELUXE</p>
             </div>
             <div class="game">
-              <img class="game-image image fallguys" src="images/fallguys.jpg" alt="">
+              <img class="game-image image-fallguys" src="images/fallguys.jpg" alt="">
               <p class="fallguys">FALLGUYS</p>
             </div>
           </div>
@@ -93,11 +93,148 @@
         </table>
         </div>
       </section>
+
       <section class="rule">
         <div class="container container-rule">
-        <h2>大会ルール</h2>
-        <p>ITチーム、DCチームに分かれて各ゲームをプレイ。<br>ゲームごとに獲得したポイントをチームごとに加算。<br>全競技終了後、合計ポイントが最も高いチームが勝利！</p>
+          <h2>大会ルール</h2>
+          <p>ITチーム、DCチームに分かれて各ゲームをプレイ。<br>ゲームごとに獲得したポイントをチームごとに加算。<br>全競技終了後、合計ポイントが最も高いチームが勝利！</p>
         </div>
+        <div class="rule-buttons">
+          <button class="rule-button button-asobitaizen"><span>世界の<br>アソビ大全51</span></button>
+          <button class="rule-button button-gangbeasts"><span>Gang Beasts</span></button>
+          <button class="rule-button button-pokemon"><span>Pokemon<br>Champions</span></button>
+          <button class="rule-button button-fallguys"><span>Fall Guys</span></button>
+          <button class="rule-button button-mariokart"><span>MARIOKART8<br>DELUXE</span></button>
+        </div>
+
+        <div class="rule-content rule-asobitaizen" id="">
+          <div class="rule-image">
+            <img src="images/asobitaizen_rule.webp" alt="">
+          </div>
+          <div class="point">
+            <p>得点</p>
+            <p>各試合の勝者に<br>15ポイント</p>
+          </div>
+          <div class="rule-detail">
+            <div class="rules__games">
+              <div class="rules__game">
+                <h4>トイテニス</h4>
+                <p>採用ルール：3ゲームマッチ</p>
+              </div>
+              <div class="rules__game">
+                <h4>ボウリング</h4>
+                <p>採用ルール：10フレーム<br>パンパー無し</p>
+              </div>
+              <div class="rules__game">
+                <h4>ゴルフ</h4>
+                <p>採用ルール：先攻ランダム、<br>スタートホールランダム、3ホール</p>
+              </div>
+              <div class="rules__game">
+                <h4>6ボールパズル</h4>
+                <p>採用ルール：ハンデなし、<br>ガイドあり</p>
+              </div>
+            </div>
+            <p class="rules__note">
+              ※ゴルフ、ボウリングの引き分け時<br>
+              試合終了時点で総合得点が少ないオフィスの方に<br>
+              勝利ポイントを与える
+            </p>
+          </div>
+        </div>
+
+        <div class="rule-content rule-gangbeasts" id="">
+          <div class="rule-image">
+            <img src="images/gangbeasts_rule.webp" alt="">
+          </div>
+          <div class="point">
+            <p>得点</p>
+            <p>各セットの勝者に<br>20ポイント</p>
+          </div>
+          <div class="rule-detail">
+            <p>試合形式：BO5（３本先取）</p>
+            <p>試合数　：最大５戦（引き分けノーカウント）</p>
+            <p>※決勝のみ、引き分け時脱落数が多い方が負け</p>
+            <p>ステージ：WEBルーレットで決定</p>
+           </div> 
+        </div>
+
+        <div class="rule-content rule-pokemon" id="">
+          <div class="rule-image">
+            <img src="images/pokemon_rule.jpg" alt="">
+          </div>
+          <div class="point">
+            <p>得点</p>
+            <p>1位　70ポイント</p>
+            <p>2位　50ポイント</p>
+            <p>3位~ 15ポイント</p>
+          </div>
+          <div class="rule-detail">
+            <div class="rules__games">
+              <div class="rules__game">
+                <p>大会形式</p>
+                <p>バトル形式</p>
+                <p>ルール</p>
+              </div>
+              <div class="rules__game">
+                <p>:トーナメント戦</p>
+                <p>:シングルバトル</p>
+                <p>:デフォルトのルール(レギュレーションM-B)に準拠</p>
+                <p> 時間切れは倒したポケモンの数で勝敗を決める</p>
+                <p> 同日中のパーティの変更は無し</p>
+                <p> 特性、持ち物、技変更も無し</p>
+                <p> 観戦時にアドバイスはNG</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="rule-content rule-fallguys" id="">
+          <div class="rule-image">
+            <img src="images/fallguys_rule.webp" alt="">
+          </div>
+          <div class="point">
+            <p>得点</p>
+            <p>各試合の1位に<br>10ポイント</p>
+          </div>
+          <div class="rule-detail">
+            <ul>
+              <li>ディスクダッシャーズ（クリエイティブコース）</li>
+              <li>ロストテンプル</li>
+              <li>ジャンプショーダウン</li>
+            </ul>
+            <p class="rules__note">
+              ※サバイバルコースのタイムアウト時<br>IT・DCの両チームに各1人以上生存者が<br>残っていた場合は、両チームに〇 pt付与
+            </p>  
+          </div>
+        </div>
+
+        <div class="rule-content rule-mariokart" id="">
+          <div class="rule-image">
+            <img src="images/mariokart_rule.jpg" alt="">
+          </div>
+          <div class="point">
+            <p>得点</p>
+            <p>ゲーム内表示<br>ポイントを取得</p>
+          </div>
+          <div class="rule-detail">
+            <div class="rules__games">
+              <div class="rules__game">
+                <p>モード：VSレース</p>
+                <p>クラス：150cc</p>
+                <p>キャラ：ヨッシー</p>
+                <p>コース：ランダム</p>
+                <p>CPU　：なし</p>
+              </div>
+              <div class="rules__game">
+                <p>アイテム：制限なし</p>
+                <p>オートアクセル・ハンドルアシスト・ジャイロ操作：自由</p>
+                <p>カート・タイヤ・カイト:自由</p>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+
       </section>
     </main>
   <footer>

@@ -39,6 +39,10 @@ a {
   text-decoration: none;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 header ul{
   display: flex;
   justify-content: flex-start;
@@ -308,3 +312,134 @@ table {
   color: var(--color-sub-blue);
 }
 
+
+/* 大会ルール */
+.rule {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.rule-buttons {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0 20px 0;
+  gap: 20px;
+  align-items: center;
+}
+
+.rule-button {
+  display: grid;
+  place-items: center;
+  padding: 12px 40px;
+  color: white;
+  border-radius: 8px;
+  transform: skewX(15deg);
+  border: 5px solid white;
+  width: 240px;
+  height: 95px;
+  font-size: 20px;
+  font-weight: Extra Bold;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.rule-button span {
+  display: inline-block;
+  transform: skewX(-15deg);
+}
+
+.button-asobitaizen {
+  background-color: var(--color-asobitaizen);
+}
+
+.button-gangbeasts {
+  background-color: var(--color-gangbeasts);
+}
+
+.button-mariokart {
+  background-color: var(--color-mariokart);
+}
+
+.button-pokemon {
+  background-color: var(--color-pokemon);
+}
+
+.button-fallguys {
+  background-color: var(--color-fallguys);
+}
+
+.rule-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 50px;
+  border-radius: 20px;
+  margin: 0 auto;
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+.rule-image {
+  grid-column: 1;
+  border-radius: 20px;
+  border: 10px solid white;
+}
+
+.point {
+  grid-column: 2;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 50px;
+}
+
+.rule-detail {
+  grid-column: 1 / 3;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px 50px;
+}
+
+.rule-asobitaizen {
+  background-color: var(--color-asobitaizen);
+  color: var(--color-asobitaizen);
+}
+
+.rules__games {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px 50px;
+  
+}
+
+.rules__game h4 {
+  margin-bottom: 5px;
+  text-decoration: underline;
+}
+
+.rules__game p {
+  margin: 0;
+}
+
+.rule-asobitaizen {
+  background-color: var(--color-asobitaizen);
+  color: var(--color-asobitaizen);
+}
+
+.rule-gangbeasts {
+  background-color: var(--color-gangbeasts);
+  color: var(--color-gangbeasts);
+}
+
+.rule-pokemon {
+  background-color: var(--color-pokemon);
+  color: var(--color-pokemon);
+}
+
+.rule-fallguys {
+  background-color: var(--color-fallguys);
+  color: var(--color-fallguys);
+}
+
+.rule-mariokart {
+  background-color: var(--color-mariokart);
+  color: var(--color-mariokart);
+}
