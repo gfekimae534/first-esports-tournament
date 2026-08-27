@@ -21,13 +21,14 @@
 }
 
 body {
-  min-width: 1024px; /* ページ全体の下限 */
+  min-width: 500px; /* ページ全体の下限 */
   font-family: "Inter",'Noto Sans JP',sans-serif;
   color: var(--color-sub-blue);
   font-weight: bold;
   background-color: #ffe66d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffcb36' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 180px 180px;
+   font-size: clamp(13px, 0.6vw + 11px, 16px);
 }
 
 img {
@@ -45,7 +46,6 @@ ul {
 
 header ul{
   display: flex;
-  justify-content: flex-start;
   gap: 100px;
   list-style: none;
   font-size: 36px;
@@ -61,6 +61,7 @@ header ul{
   z-index: 10;
 }
 
+/*メインビジュアル*/
 .hero {
   width: 100%;
   text-align: center;
@@ -76,7 +77,8 @@ header ul{
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 180px;
+  width: 100%;
+  padding: 180px 200px 0 200px;
 }
 
 .controller-blue {
@@ -107,12 +109,48 @@ header ul{
   z-index: 0;
 }
 
+.fallguys-sticker {
+  position: absolute;
+  top: 31%;
+  left: 2%;
+  z-index: 2;   
+}
+
+.mariokart-sticker {
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  z-index: 2;   
+}
+
+.gangbeasts-sticker {
+  position: absolute;
+  top: 61%;
+  left: 10%;
+  z-index: 2;   
+}
+
+.pokemon-sticker {
+  position: absolute;
+  top: 61%;
+  right: 5%;
+  z-index: 2;   
+}
+
+.asobitaizen-sticker {
+  position: absolute;
+  top: 35%;
+  right: 10%;
+  z-index: 2;   
+}
+
+
 h1 {
   -webkit-text-stroke: 8px #fff;       /* 5pxの白縁(モダンブラウザ) */
   paint-order: stroke fill;            /* 縁を文字の後ろに回す(縁が文字を潰さないように) */
   filter: drop-shadow(0px 4px 2px rgba(0, 0, 0, 0.5));
 /* 右に0px、下に4pxずらし、2pxぼかした、透明度50%の黒い影 */
-  z-index: 1;
+  z-index: 5;
 }
 
 .sub-title.main-orange {
@@ -121,6 +159,7 @@ h1 {
   top: 25%;
   left: 20%;
   transform: rotate(-10deg);
+  z-index: 5;
 }
 
 .sub-title.sub-orange {
@@ -128,17 +167,18 @@ h1 {
   position: absolute;
   top: 30%;
   left: 37%;
+  z-index: 5;
 }
 
 
 
 .title-blue{
-  font-size: 64px;
+  font-size: 2.6rem;
   letter-spacing: 0.15em;
 }
 
 .title-orange{
-  font-size: 96px;
+  font-size: 3.0rem;
   letter-spacing: 0.15em;
 }
 
@@ -146,8 +186,11 @@ h1 {
 main {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 90px;
+  width: 100%;
 }
+
+/* 大会紹介 */
 
 .about {
   margin-top: -80px;
@@ -368,7 +411,7 @@ table {
 }
 
 .rule-content {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
   padding: 50px;
@@ -376,6 +419,11 @@ table {
   margin: 0 auto;
   font-size: 32px;
   line-height: 1.5;
+  margin-bottom: 100px;
+}
+
+.rule-content.active {
+  display: grid; /* レイアウトに応じて flex 等でもOK */
 }
 
 .rule-image {
@@ -442,4 +490,22 @@ table {
 .rule-mariokart {
   background-color: var(--color-mariokart);
   color: var(--color-mariokart);
+}
+
+/* フッター */
+footer {
+  background-color: var(--color-main-blue);
+  color: white;
+  height: 230px;
+  padding: 60px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.footer__organizer{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  font-size: 20px;
 }

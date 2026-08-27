@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;800&display=swap" rel="stylesheet">
+  
 </head>
 <body>
   <header>
@@ -24,7 +25,11 @@
     <main>
       <section class="hero">
         <div class="hero-inner">
-          <img class="" src="" alt="">
+          <img class="fallguys-sticker" src="images/fallguys_sticker.png" alt="">
+          <img class="mariokart-sticker" src="images/mariokart_sticker.png" alt="">
+          <img class="gangbeasts-sticker" src="images/gangbeasts_sticker.png" alt="">
+          <img class="pokemon-sticker" src="images/pokemon_sticker.png" alt="">
+          <img class="asobitaizen-sticker" src="images/asobitaizen_sticker.png" alt="">
           <img class="controller-blue main-blue" src="images/controller_blue.svg" alt="">
           <img class="controller-orange sub-orange" src="images/controller_orange.svg" alt="">
           <img class="controller-blue-shadow" src="images/controller_blue_shadow.svg" alt="">
@@ -100,14 +105,14 @@
           <p>ITチーム、DCチームに分かれて各ゲームをプレイ。<br>ゲームごとに獲得したポイントをチームごとに加算。<br>全競技終了後、合計ポイントが最も高いチームが勝利！</p>
         </div>
         <div class="rule-buttons">
-          <button class="rule-button button-asobitaizen"><span>世界の<br>アソビ大全51</span></button>
-          <button class="rule-button button-gangbeasts"><span>Gang Beasts</span></button>
-          <button class="rule-button button-pokemon"><span>Pokemon<br>Champions</span></button>
-          <button class="rule-button button-fallguys"><span>Fall Guys</span></button>
-          <button class="rule-button button-mariokart"><span>MARIOKART8<br>DELUXE</span></button>
+          <button class="rule-button active button-asobitaizen" data-game="game1"><span>世界の<br>アソビ大全51</span></button>
+          <button class="rule-button button-gangbeasts" data-game="game2"><span>Gang Beasts</span></button>
+          <button class="rule-button button-pokemon" data-game="game3"><span>Pokemon<br>Champions</span></button>
+          <button class="rule-button button-fallguys" data-game="game4"><span>Fall Guys</span></button>
+          <button class="rule-button button-mariokart" data-game="game5"><span>MARIOKART8<br>DELUXE</span></button>
         </div>
 
-        <div class="rule-content rule-asobitaizen" id="">
+        <div class="rule-content rule-asobitaizen" id="game1">
           <div class="rule-image">
             <img src="images/asobitaizen_rule.webp" alt="">
           </div>
@@ -142,7 +147,7 @@
           </div>
         </div>
 
-        <div class="rule-content rule-gangbeasts" id="">
+        <div class="rule-content rule-gangbeasts" id="game2">
           <div class="rule-image">
             <img src="images/gangbeasts_rule.webp" alt="">
           </div>
@@ -158,7 +163,7 @@
            </div> 
         </div>
 
-        <div class="rule-content rule-pokemon" id="">
+        <div class="rule-content rule-pokemon" id="game3">
           <div class="rule-image">
             <img src="images/pokemon_rule.jpg" alt="">
           </div>
@@ -166,7 +171,7 @@
             <p>得点</p>
             <p>1位　70ポイント</p>
             <p>2位　50ポイント</p>
-            <p>3位~ 15ポイント</p>
+            <p>3位　30ポイント</p>
           </div>
           <div class="rule-detail">
             <div class="rules__games">
@@ -188,7 +193,7 @@
           </div>
         </div>
 
-        <div class="rule-content rule-fallguys" id="">
+        <div class="rule-content rule-fallguys" id="game4">
           <div class="rule-image">
             <img src="images/fallguys_rule.webp" alt="">
           </div>
@@ -208,7 +213,7 @@
           </div>
         </div>
 
-        <div class="rule-content rule-mariokart" id="">
+        <div class="rule-content rule-mariokart" id="game5">
           <div class="rule-image">
             <img src="images/mariokart_rule.jpg" alt="">
           </div>
@@ -238,7 +243,12 @@
       </section>
     </main>
   <footer>
-
+    <p>第1回ディーキャリア岐阜esports大会</p>
+    <div class="footer__organizer">
+      <p>ディーキャリア岐阜オフィス</p>
+      <p>ディーキャリアITエキスパート岐阜オフィス</p>
+    </div>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
