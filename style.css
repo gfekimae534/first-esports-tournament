@@ -99,8 +99,8 @@ header a {
 .controller-orange {
   position: absolute;
   width: clamp(280px, 21.5vw + 199px, 509px);
-  top: 42%;
-  right: 52%;
+  top: 41%;
+  right: 18%;
   z-index: 1;
 }
 
@@ -108,7 +108,7 @@ header a {
   position: absolute;
   width: clamp(270px, 20.9vw + 192px, 492px);
   top: 46%;
-  left: 22%;
+  left: 21%;
   z-index: 0;
 }
 
@@ -116,7 +116,7 @@ header a {
   position: absolute;
   width: clamp(280px, 21.5vw + 199px, 509px);
   top: 41%;
-  right: 22%;
+  right: 19%;
   z-index: 0;
 }
 
