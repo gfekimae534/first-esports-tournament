@@ -319,9 +319,34 @@ h2 {
 
 .content-asobitaizen-sticker{
   position: absolute;
-  bottom: -50px;
-  right: -5%;
+  bottom: 3%;
+  right: 0%;
 }
+
+.image-king {
+  position: absolute;
+  bottom: 30%;
+  left: 3%;
+  width: clamp(60px, 8.8vw + 16px, 143px);
+  aspect-ratio: 1 / 1;
+}
+
+.image-game-controller {
+  position: absolute;
+  bottom: 20%;
+  right: 6%;
+  width: clamp(60px, 8.6vw + 17px, 141px);
+  aspect-ratio: 1 / 1;
+}
+
+.image-clock {
+  position: absolute;
+  top: 5%;
+  right: 27%;
+  width: clamp(45px, 6.1vw + 15px, 102px);
+  aspect-ratio: 1 / 1;
+}
+
 
 /* 競技種目 */
 .game-table {
@@ -577,6 +602,10 @@ footer {
 @media (max-width: 1200px) {
   .break {
     display: block;
+  }
+
+  .controller-blue,.controller-blue-shadow,.controller-orange,.controller-orange-shadow{
+    display: none;
   }
 
 }
