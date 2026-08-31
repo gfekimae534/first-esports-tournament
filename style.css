@@ -491,6 +491,11 @@ table {
   font-size: clamp(14px, 0.7vw + 11px, 20px);
   font-weight: 600;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.rule-button:hover {
+  transform: skewX(15deg) translateY(-3px);
 }
 
 .rule-button span {
