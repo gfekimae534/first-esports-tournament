@@ -28,8 +28,23 @@ body {
   background-color: #ffe66d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffcb36' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 180px 180px;
-   font-size: clamp(13px, 0.6vw + 11px, 16px);
+  font-size: clamp(13px, 0.6vw + 11px, 16px);
+  background-size: 180px 180px;
+  animation: bgMove 8s linear infinite;
 }
+
+@keyframes bgMove {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: -180px 180px;
+  }
+}
+
+
+html, body { overflow-x: hidden; }
 
 img {
   max-width: 100%;
@@ -76,6 +91,7 @@ header a {
   background-size: cover;      /* 画像を要素いっぱいに拡大縮小 */
   background-repeat: no-repeat;
   height: 100vh;
+  z-index: 2;
 }
 
 .hero-inner {
@@ -93,7 +109,7 @@ header a {
   width: clamp(270px, 20.9vw + 192px, 492px);
   top: 45%;
   left: 20%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .controller-orange {
@@ -101,7 +117,7 @@ header a {
   width: clamp(280px, 21.5vw + 199px, 509px);
   top: 41%;
   right: 18%;
-  z-index: 1;
+  z-index: 4;
 }
 
 .controller-blue-shadow {
@@ -109,7 +125,7 @@ header a {
   width: clamp(270px, 20.9vw + 192px, 492px);
   top: 46%;
   left: 21%;
-  z-index: 0;
+  z-index: 3;
 }
 
 .controller-orange-shadow {
@@ -117,7 +133,7 @@ header a {
   width: clamp(280px, 21.5vw + 199px, 509px);
   top: 41%;
   right: 19%;
-  z-index: 0;
+  z-index: 3;
 }
 
 .fallguys-sticker {
@@ -125,7 +141,7 @@ header a {
   width: clamp(220px, 16.9vw + 157px, 400px);
   top: 31%;
   left: 2%;
-  z-index: 2;   
+  z-index: 5;   
 }
 
 .mariokart-sticker {
@@ -133,7 +149,7 @@ header a {
   width: clamp(160px, 11.9vw + 115px, 287px);
   top: 15%;
   right: 20%;
-  z-index: 2;   
+  z-index: 5;   
 }
 
 .gangbeasts-sticker {
@@ -141,7 +157,7 @@ header a {
   width: clamp(110px, 8.3vw + 79px, 198px);
   top: 61%;
   left: 10%;
-  z-index: 2;   
+  z-index: 5;   
 }
 
 .pokemon-sticker {
@@ -149,7 +165,7 @@ header a {
   width: clamp(185px, 13.7vw + 134px, 331px);
   top: 61%;
   right: 5%;
-  z-index: 2;   
+  z-index: 5;   
 }
 
 .asobitaizen-sticker {
@@ -157,7 +173,7 @@ header a {
   width: clamp(90px, 6.6vw + 65px, 160px);
   top: 35%;
   right: 10%;
-  z-index: 2;   
+  z-index: 5;   
 }
 
 
@@ -208,7 +224,7 @@ main {
 
 .container {
   margin: 0 auto;
-  padding:  60px var(--space-lg);
+  padding:  40px var(--space-lg);
   background-color: var(--color-white);
   border: 5px solid var(--color-main-blue);
   text-align: center;
@@ -234,6 +250,7 @@ main {
 .container-about {
   border-radius: 24px;
   width: 100%;
+  margin-top: -30px;
 }
 
 .container-games{
@@ -262,21 +279,16 @@ main {
 }
 
 .slogan-text {
-  margin-top: clamp(32px, 4vw + 20px, 75px);
+  margin-top: 50px;
 }
 
 .slogan {
-  font-size: 75px;
-  padding: 25px 0;
+  font-size:clamp(32px, 4vw + 20px, 75px);
+  line-height: 1.5;
 }
 
 section {
   scroll-margin-top: 100px;
-}
-
-.rule {
-  font-size: 	clamp(18px, 1.6vw + 12px, 36px);
-  line-height: 2.1;
 }
 
 h2 {
@@ -307,7 +319,7 @@ h2 {
   position: absolute;
   width: clamp(185px, 13.7vw + 134px, 331px);
   bottom: -5%;
-  right: -5%;
+  right: -12%;
 }
 
 .content-fallguys-sticker{
@@ -341,8 +353,8 @@ h2 {
 
 .image-clock {
   position: absolute;
-  top: 5%;
-  right: 27%;
+  top: 6%;
+  right: 25%;
   width: clamp(45px, 6.1vw + 15px, 102px);
   aspect-ratio: 1 / 1;
 }
@@ -353,10 +365,11 @@ h2 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 30px 5px; /* 上下の間隔 左右の間隔 */
+  text-align: center;
 }
 
 .game {
-  text-align: center;
+  margin: 0 auto;
 }
 
 .game:nth-child(1) { grid-column: 1 / 3; }
@@ -448,12 +461,18 @@ table {
 .rule {
   max-width: 1200px;
   margin: 0 auto;
+  font-size: 	clamp(18px, 1.6vw + 12px, 36px);
+  line-height: 2.1;
+}
+
+.rule h2{
+  line-height: 1.5;
 }
 
 .rule-buttons {
   display: flex;
   justify-content: center;
-  margin: 80px 0 20px 0;
+  margin: 20px 0 20px 0;
   gap: 20px;
   align-items: center;
   flex-wrap: wrap;
@@ -470,7 +489,7 @@ table {
   width: 220px;
   height: 95px;
   font-size: clamp(14px, 0.7vw + 11px, 20px);
-  font-weight: Extra Bold;
+  font-weight: 600;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
@@ -509,6 +528,7 @@ table {
   font-size: clamp(16px, 1.3vw + 10px, 32px);
   line-height: 1.5;
   margin-bottom: 100px;
+  border: 5px solid white;
 }
 
 .rule-content.active {
@@ -519,6 +539,7 @@ table {
   grid-column: 1;
   border-radius: 20px;
   border: 10px solid white;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
 .point {
@@ -526,6 +547,8 @@ table {
   background-color: white;
   border-radius: 20px;
   padding: 30px 50px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
+  font-family: 'Noto Sans JP',sans-serif;
 }
 
 .rule-detail {
@@ -533,13 +556,22 @@ table {
   background-color: white;
   border-radius: 20px;
   padding: 30px 50px;
+  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.3);
 }
 
-.rule-asobitaizen {
-  background-color: var(--color-asobitaizen);
-  color: var(--color-asobitaizen);
+.rules__note{
+  padding-top: 20px;
 }
 
+.asobi-title{
+  border-bottom: 2px solid var(--color-asobitaizen);
+  display: inline;
+}
+
+.rule-pokemon .margin{
+  margin-left: -60%;
+}
+ 
 .rules__games {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -597,6 +629,7 @@ footer {
   justify-content: center;
   padding-top: 50px;
   font-size: clamp(14px, 0.6vw + 11px, 20px);
+  gap: 40px;
 }
 
 @media (max-width: 1200px) {
@@ -606,6 +639,10 @@ footer {
 
   .controller-blue,.controller-blue-shadow,.controller-orange,.controller-orange-shadow{
     display: none;
+  }
+
+  .rule-pokemon .point {
+    padding: 10px 50px;
   }
 
 }
