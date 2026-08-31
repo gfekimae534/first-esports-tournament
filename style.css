@@ -83,6 +83,10 @@ header a {
   color: white;
 }
 
+header a:hover {
+  color: var(--color-sub-orange);
+}
+
 /*メインビジュアル*/
 .hero {
   width: 100%;
@@ -136,12 +140,27 @@ header a {
   z-index: 3;
 }
 
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(1.5deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
 .fallguys-sticker {
   position: absolute;
   width: clamp(220px, 16.9vw + 157px, 400px);
   top: 31%;
   left: 2%;
   z-index: 5;   
+  animation: float 3s ease-in-out infinite;
 }
 
 .mariokart-sticker {
@@ -150,6 +169,7 @@ header a {
   top: 15%;
   right: 20%;
   z-index: 5;   
+  animation: float 3.0s ease-in-out infinite;
 }
 
 .gangbeasts-sticker {
@@ -158,6 +178,7 @@ header a {
   top: 61%;
   left: 10%;
   z-index: 5;   
+   animation: float 5.2s ease-in-out infinite;
 }
 
 .pokemon-sticker {
@@ -166,6 +187,7 @@ header a {
   top: 61%;
   right: 5%;
   z-index: 5;   
+   animation: float 3.8s ease-in-out infinite;
 }
 
 .asobitaizen-sticker {
@@ -173,7 +195,8 @@ header a {
   width: clamp(90px, 6.6vw + 65px, 160px);
   top: 35%;
   right: 10%;
-  z-index: 5;   
+  z-index: 5;  
+  animation: float 4.72s ease-in-out infinite; 
 }
 
 
@@ -301,6 +324,15 @@ h2 {
 }
 
 /* 各画像 */
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
 .content-mariokart-sticker{
   position: absolute;
   width: clamp(160px, 11.9vw + 115px, 287px);
@@ -334,6 +366,28 @@ h2 {
   bottom: 3%;
   right: 0%;
 }
+
+.content-mariokart-sticker:hover {
+  animation: floatY 0.3s ease-in-out infinite;
+}
+
+.content-gangbeasts-sticker:hover {
+  animation: floatY 0.6s ease-in-out infinite;
+}
+
+.content-pokemon-sticker:hover{
+  animation: floatY 0.2s ease-in-out infinite;
+}
+
+.content-fallguys-sticker:hover{
+  animation: floatY 0.3s ease-in-out infinite;
+}
+
+.content-asobitaizen-sticker:hover {
+  animation: floatY 0.6s ease-in-out infinite;
+}
+
+
 
 .image-king {
   position: absolute;
@@ -495,7 +549,7 @@ table {
 }
 
 .rule-button:hover {
-  transform: skewX(15deg) translateY(-3px);
+  transform: skewX(15deg) translateY(-7px);
 }
 
 .rule-button span {
