@@ -1,5 +1,5 @@
 :root {
-  --content-width: 1200px;
+  --content-width: 1000px;
   --space-lg: 32px;
   --color-main-orange: #FF7A00;
   --color-sub-orange: #FFB000;
@@ -28,7 +28,7 @@ body {
   background-color: #ffe66d;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%23ffcb36' fill-opacity='1'%3E%3Cpath fill-rule='evenodd' d='M0 0h40v40H0V0zm40 40h40v40H40V40zm0-40h2l-2 2V0zm0 4l4-4h2l-6 6V4zm0 4l8-8h2L40 10V8zm0 4L52 0h2L40 14v-2zm0 4L56 0h2L40 18v-2zm0 4L60 0h2L40 22v-2zm0 4L64 0h2L40 26v-2zm0 4L68 0h2L40 30v-2zm0 4L72 0h2L40 34v-2zm0 4L76 0h2L40 38v-2zm0 4L80 0v2L42 40h-2zm4 0L80 4v2L46 40h-2zm4 0L80 8v2L50 40h-2zm4 0l28-28v2L54 40h-2zm4 0l24-24v2L58 40h-2zm4 0l20-20v2L62 40h-2zm4 0l16-16v2L66 40h-2zm4 0l12-12v2L70 40h-2zm4 0l8-8v2l-6 6h-2zm4 0l4-4v2l-2 2h-2z'/%3E%3C/g%3E%3C/svg%3E");
   background-size: 180px 180px;
-  font-size: clamp(13px, 0.6vw + 11px, 16px);
+  font-size: clamp(12px, 0.09vw + 11.7px, 13px);
   background-size: 180px 180px;
   animation: bgMove 8s linear infinite;
 }
@@ -79,7 +79,7 @@ header ul{
 header a {
   font-weight: normal;
   font-family: 'Noto Sans JP',sans-serif;
-  font-size: clamp(20px, 1.6vw + 15px, 36px);
+  font-size: clamp(18px, 1.03vw + 14px, 29px);
   color: white;
 }
 
@@ -293,12 +293,12 @@ main {
 
 .about {
   margin-top: -80px;
-  font-size: clamp(20px, 2vw + 12px, 40px);
+  font-size: clamp(18px, 1.32vw + 13px, 32px);
   line-height: 1.9;
 }
 
 .days {
-  font-size: 	clamp(24px, 2.2vw + 16px, 48px);
+  font-size: 		clamp(22px, 1.6vw + 16px, 39px);
 }
 
 .slogan-text {
@@ -306,7 +306,7 @@ main {
 }
 
 .slogan {
-  font-size:clamp(32px, 4vw + 20px, 75px);
+  font-size: clamp(29px, 3vw + 18px, 61px);
   line-height: 1.5;
 }
 
@@ -320,7 +320,7 @@ h2 {
   width: fit-content;
   margin: 0 auto 40px;
   padding-bottom: 7px;
-  font-size: clamp(28px, 2.3vw + 18px, 52px);
+  font-size: 	clamp(25px, 1.6vw + 19px, 42px);
 }
 
 /* 各画像 */
@@ -336,7 +336,7 @@ h2 {
 .content-mariokart-sticker{
   position: absolute;
   width: clamp(160px, 11.9vw + 115px, 287px);
-  top: -6%;
+  top: -10%;
   right: 5%;
 }
 
@@ -400,15 +400,15 @@ h2 {
 .image-game-controller {
   position: absolute;
   bottom: 20%;
-  right: 6%;
+  right: 4%;
   width: clamp(60px, 8.6vw + 17px, 141px);
   aspect-ratio: 1 / 1;
 }
 
 .image-clock {
   position: absolute;
-  top: 6%;
-  right: 25%;
+  top: 5%;
+  right: 23%;
   width: clamp(45px, 6.1vw + 15px, 102px);
   aspect-ratio: 1 / 1;
 }
@@ -441,7 +441,7 @@ h2 {
 .game p {
   margin-top: 12px;
   font-weight: Semi Bold;
-  font-size: 	clamp(18px, 1.3vw + 12px, 32px);
+  font-size: 	clamp(16px, 0.94vw + 12.5px, 26px);
   text-align: left;
 }
 
@@ -493,7 +493,7 @@ h2 {
 table {
   margin: 0 auto;
   line-height: 1.9;
-  font-size: 	clamp(16px, 1.3vw + 10px, 32px);
+  font-size: 		clamp(14px, 1.13vw + 10px, 26px);
 }
 
 .time-table th {
@@ -513,9 +513,9 @@ table {
 
 /* 大会ルール */
 .rule {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 0 auto;
-  font-size: 	clamp(18px, 1.6vw + 12px, 36px);
+  font-size: clamp(14px, 0.94vw + 10.5px, 24px);
   line-height: 2.1;
 }
 
@@ -535,14 +535,14 @@ table {
 .rule-button {
   display: grid;
   place-items: center;
-  padding: 12px 40px;
+  padding: 12px 10px;
   color: white;
   border-radius: 8px;
   transform: skewX(15deg);
   border: 5px solid white;
-  width: 220px;
+  width: 180px;
   height: 95px;
-  font-size: clamp(14px, 0.7vw + 11px, 20px);
+  font-size: clamp(13px, 0.28vw + 12px, 16px);
   font-weight: 600;
   box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -584,9 +584,9 @@ table {
   padding: 50px;
   border-radius: 20px;
   margin: 0 auto;
-  font-size: clamp(16px, 1.3vw + 10px, 32px);
+  font-size: 	clamp(12px, 0.75vw + 8.5px, 20px);
   line-height: 1.5;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
   border: 5px solid white;
 }
 
@@ -676,18 +676,18 @@ table {
 footer {
   background-color: var(--color-main-blue);
   color: white;
-  height: 230px;
-  padding: 60px 0;
+  height: 180px;
+  padding: 50px 0;
   text-align: center;
-  font-size: 	clamp(16px, 0.8vw + 12px, 24px);
+  font-size: clamp(12px, 0.47vw + 10px, 17px);
   font-weight: normal;
 }
 
 .footer__organizer{
   display: flex;
   justify-content: center;
-  padding-top: 50px;
-  font-size: clamp(14px, 0.6vw + 11px, 20px);
+  padding-top: 40px;
+  font-size: clamp(11px, 0.24vw + 10px, 14px);
   gap: 40px;
 }
 
@@ -698,10 +698,6 @@ footer {
 
   .controller-blue,.controller-blue-shadow,.controller-orange,.controller-orange-shadow{
     display: none;
-  }
-
-  .rule-pokemon .point {
-    padding: 10px 50px;
   }
 
 }
